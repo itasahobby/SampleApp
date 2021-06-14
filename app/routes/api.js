@@ -14,9 +14,10 @@ router.get("/city/:id", async (req, res) => {
     try {
         const cityId = req.params['id'];
         city = cities[cityId];
+        if(!city) res.status(404).send()
         res.status(200).send(city);
     } catch (error) {
-        res.status(404).send();
+        res.status(500).send();
     }
 });
 

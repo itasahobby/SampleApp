@@ -16,7 +16,7 @@ describe('Homepage', () => {
       .request(app)
       .get('/')
       .end((error, response) => {
-        response.text.should.equal("Hello World!")
+        response.text.should.equal("Hello World! (v2.0)")
         done()
       })
   });

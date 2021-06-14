@@ -14,10 +14,16 @@ router.get("/city/:id", async (req, res) => {
     try {
         const cityId = req.params['id'];
         city = cities[cityId];
+        if(!city) res.status(404).send()
         res.status(200).send(city);
     } catch (error) {
-        res.status(404).send();
+        res.status(500).send();
     }
+});
+
+// Get first city
+router.get("/city/first", async (req, res) => {
+    res.status(200).send(cities[0]);
 });
 
 // Create new city

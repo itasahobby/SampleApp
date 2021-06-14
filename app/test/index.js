@@ -51,4 +51,16 @@ describe('Testing city API', () => {
         done()
       })
   });
+  it('should return all the cities together with the new one', done => {
+    const newCity = {"nombre": "Sada", "provincia": "A Coruña", "comAutonoma": "Galicia"}
+    expectedCities = [...cities,newCity];
+    chai
+      .request(app)
+      .post('/api/city')
+      .send(newCity)
+      .end((error, response) => {
+        response.text.should.equal(JSON.stringify(expectedCities))
+        done()
+      })
+  });
 })

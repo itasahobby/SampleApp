@@ -13,6 +13,11 @@ app.get('/', (req, res) => {
 
 app.use("/api", require("./routes/api"));
 
-app.listen(port, () => {
-  console.log(`Sample app listening at http://localhost:${port}`)
-})
+// Running server
+if (process.env.NODE_ENV === 'test') {
+	module.exports = app;
+} else {
+	app.listen(port, () => {
+        console.log(`Sample app listening at http://localhost:${port}`)
+    })
+}

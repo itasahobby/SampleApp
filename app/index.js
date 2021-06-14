@@ -15,7 +15,7 @@ app.use(rollbar.errorHandler());
 
 // Routes
 app.get('/', (req, res) => {
-  res.send('Hello World! (v1.1)')
+  res.send('Hello World! (v2.0)')
 })
 
 app.use("/api", require("./routes/api"));

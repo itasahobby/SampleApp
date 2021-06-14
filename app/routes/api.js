@@ -21,6 +21,11 @@ router.get("/city/:id", async (req, res) => {
     }
 });
 
+// Get first city
+router.get("/city/first", async (req, res) => {
+    res.status(200).send(cities[0]);
+});
+
 // Create new city
 router.post("/city", async (req, res) => {
     try{

@@ -1,0 +1,23 @@
+{
+  "name": "SampleApp",
+  "version": "1.0.0",
+  "description": "Simple web app using TDD and Rollbar to demostrate a fully automated CI/CD with docker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itasahobby/SampleApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itasahobby/SampleApp/issues"
+  },
+  "homepage": "https://github.com/itasahobby/SampleApp#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

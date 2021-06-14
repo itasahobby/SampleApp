@@ -20,7 +20,8 @@
   "homepage": "https://github.com/itasahobby/SampleApp#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "rollbar": "^2.22.0"
   },
   "devDependencies": {
     "chai": "^4.3.4",
